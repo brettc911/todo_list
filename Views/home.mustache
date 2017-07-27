@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style/master.css">
+    <title></title>
+  </head>
+  <body>
+
+    <form class="form" action="/" method="post">
+      <input type="text" name="newTodo" placeholder="">
+      <button>Add to list</button>
+    </form>
+
+    <section>
+      <h1>To do:</h1>
+      <ol>
+      {{#todo}}
+        <form class="" action="/{{.}}" method="post">
+        <li>{{.}}</li>
+        <button>Complete</button>
+        </form>
+      {{/todo}}
+      </ol>
+
+
+      <h1>Done:</h1>
+      <ol>
+        {{#done}}
+        <li>{{.}}</li>
+        {{/done}}
+      </ol>
+    </section>
+
+  </body>
+</html>
